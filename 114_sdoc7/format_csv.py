@@ -34,10 +34,14 @@ def format_csv(source_doc, csv_file='senate_data.csv', cleaned_file='senate_data
         reference_page = line[3]
         document_number = line[4]
         date_posted = line[5]
+        payee = line[6]
         start_date = line[7]
         end_date = line[8]
         description = line[9]
+        amount = line[10]
+
+        salary_flag = 0 if start_date == '' and end_date == '' else 1
 
         cleaned_data_writer.writerow([source_doc, senator_flag, senator_name, raw_office, funding_year,
                                       fiscal_year, congress_number, reference_page, document_number, date_posted,
-                                      start_date, end_date, description])
+                                      start_date, end_date, description, salary_flag, amount, payee])
