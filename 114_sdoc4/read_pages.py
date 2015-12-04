@@ -31,6 +31,7 @@ former_employee_benefits_re = re.compile("\s+BENEFITS FOR NON SENATE/FORMER PERS
 page_number_re = re.compile("\s+B\s*\-\s*\d+\s*")
 
 def is_subtotal(line):
+
     if travel_re.match(line):
         return True
     if it_re.match(line):
