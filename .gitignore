@@ -55,3 +55,8 @@ docs/_build/
 
 # PyBuilder
 target/
+
+# Misc
+.DS_Store
+.idea/
+*.swp
